@@ -1,0 +1,19 @@
+---
+version: 1.0
+configuration:
+  has_webserver: true
+  readonly_paths:
+    - src/app/app.component.spec.ts
+    - src/app/movie-list/movie-list.component.spec.ts
+  scoring:
+    command: "npm test"
+    files:
+      - unit.xml
+  ide_config:
+    default_open_files:
+      - src/app/movie-list/movie-list.component.html
+      - src/app/movie-list/movie-list.component.ts
+    project_menu:
+      run: npm start
+      install: npm install
+      test: npm test
